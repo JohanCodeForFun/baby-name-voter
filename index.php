@@ -4,15 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Baby Name Voter</title>
 </head>
 
 <body>
-  <h1>Hello $php!</h1>
-  <?php
-  $php = "PHP";
-  echo "My first PHP script!";
-  ?>
+  <form action="action.php" method="post">
+    <label for="name">Your favorable names:</label>
+    <textarea name="names" id="names" type="text"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
 
 </html>
