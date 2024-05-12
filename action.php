@@ -11,15 +11,19 @@
   <h1>
     Here is your list of names:
   </h1>
-  
-  <?php
-  $names = $_POST['names'];
-  $namesArray = explode(",", $names);
 
-  foreach ($namesArray as $name) {
-    echo "<p>" . htmlspecialchars(trim($name)) . "</p>";
-  }
-  ?>.
+  <ul>
+
+    <?php
+    $names = $_POST['names'];
+    $namesArray = explode(",", $names);
+
+    foreach ($namesArray as $name) {
+      echo "<li>" . htmlspecialchars(trim($name)) . "</li>";
+    }
+    ?>.
+  </ul>
+
 </body>
 
 </html>
