@@ -38,15 +38,21 @@
       const pointsSpan = checkbox.parentNode.querySelector('.points');
 
       checkbox.addEventListener('change', (event) => {
-        if (event.target.checked) {
-          event.target.value = availablePoints.shift() || 0;
-          pointsSpan.textContent = ` (${event.target.value} points)`;
-        } else {
+        if (!event.target.checked) {
           availablePoints.push(event.target.value);
           availablePoints.sort((a, b) => b - a);
           pointsSpan.textContent = '';
           event.target.value = 0;
+          return;
         }
+
+        if (availablePoints.length === 0) {
+          event.target.value = 0;
+          return;
+        }
+
+        event.target.value = availablePoints.shift();
+        pointsSpan.textContent = ` (${event.target.value} points)`;
       });
     });
   </script>
