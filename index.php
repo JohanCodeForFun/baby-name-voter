@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <form action="action.php" method="post">
+  <form action="voting-list.php" method="post">
     <label for="name">Your favorable names:</label>
     <textarea name="names" id="names" type="text"></textarea>
 
