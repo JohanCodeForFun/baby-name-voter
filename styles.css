@@ -1,0 +1,13 @@
+body {
+  background-color: burlywood;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: row;
+}
