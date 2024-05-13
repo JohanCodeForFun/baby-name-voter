@@ -22,6 +22,7 @@
       $point = isset($points[$index]) ? $points[$index] : 0;
       echo "<div class='name-container'>
       <input type='checkbox' name='votes[{$name}]' value='{$point}'>{$name}
+      <span class='points'></span>
       </div>";
     }
     ?>
@@ -34,9 +35,7 @@
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
     checkboxes.forEach((checkbox) => {
-      const pointsSpan = document.createElement('span');
-      pointsSpan.classList.add('points');
-      checkbox.parentNode.appendChild(pointsSpan);
+      const pointsSpan = checkbox.parentNode.querySelector('.points');
 
       checkbox.addEventListener('change', (event) => {
         if (event.target.checked) {
