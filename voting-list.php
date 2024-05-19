@@ -18,6 +18,8 @@
     $names = $_POST['names'];
     $namesArray = explode(",", $names);
 
+    sort($namesArray);
+
     foreach ($namesArray as $name) {
       echo "<li>" . htmlspecialchars(trim($name)) . "</li>";
     }
