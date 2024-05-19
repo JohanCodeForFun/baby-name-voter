@@ -17,3 +17,5 @@ Once DDEV is installed, setting up a new project should be quick:
 - cd into the project directory and run ddev config to initialize a DDEV project.
 - Run ddev start to spin up the project.
 - Run ddev launch to open your project in a browser.
+- ddev stop stops a project and removes its memory usage (but does not throw away any data).
+- ddev poweroff stops all resources that DDEV is using and stops the Mutagen daemon if it’s running.
