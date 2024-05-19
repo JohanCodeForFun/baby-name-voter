@@ -17,8 +17,10 @@
     <?php
     $votes = $_POST['votes'];
 
-    foreach ($votes as $vote) {
-      echo "<li>" . htmlspecialchars(trim($vote)) . "</li>";
+    arsort($votes);
+
+    foreach ($votes as $name => $vote) {
+      echo "<li>" . htmlspecialchars(trim($name)) . ": " . htmlspecialchars(trim($vote)) . "points.</li>";
     }
     ?>
 </ul>
