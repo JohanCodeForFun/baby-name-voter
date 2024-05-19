@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-10 mx-auto col-lg-5">
         <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" action="voting-list.php" method="post">
-          <textarea class="form-control" name="names" id="names" placeholder="Your favorable names:" id="floatingTextarea"></textarea>
+          <textarea class="form-control" rows="5" name="names" id="names" placeholder="Your favorable names:" id="floatingTextarea"></textarea>
           <label for="floatingTextarea">Your favorable names:</label>
           <button class="w-100 btn btn-lg btn-primary" type="submit">Create voting list!</button>
         </form>
