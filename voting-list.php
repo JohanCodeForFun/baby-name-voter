@@ -16,7 +16,7 @@
       <div class="list-group">
         <?php
         $names = $_POST['names'];
-        $namesArray = explode(",", $names);
+        $namesArray = preg_split("/[\s,]+/", $names);
 
         sort($namesArray);
 
